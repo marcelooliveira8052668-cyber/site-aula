@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plataforma de Aulas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>📚 Plataforma do Prof. Marcelo</h1>
+</header>
+
+<div class="container">
+
+  <!-- AULA AO VIVO -->
+  <section>
+    <h2>🔴 Aula ao Vivo</h2>
+    <p id="statusLive">A aula não está acontecendo agora.</p>
+    <a href="https://meet.google.com/SEU-LINK-AQUI" target="_blank">
+  <button>🎥 Entrar na Aula Ao Vivo</button>
+</a>
+  </section>
+
+  <!-- AULAS GRAVADAS -->
+  <section>
+    <h2>🎥 Aulas Gravadas</h2>
+
+    <div class="video">
+      <h3>Brasil.</h3>
+      <iframe src="aula1.MOV"></iframe>
+    </div>
+
+    <div class="video">
+      <h3>Egito Antigo</h3>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
+    </div>
+
+  </section>
+
+  <!-- MATERIAIS -->
+  <section>
+    <h2>📄 Materiais</h2>
+    <ul id="materiais"></ul>
+  </section>
+
+</div>
+
+<!-- PAINEL DO PROFESSOR -->
+<div class="admin">
+  <h3>🔒 Painel do Professor</h3>
+
+  <input type="password" id="senha" placeholder="Digite a senha">
+  <button onclick="login()">Entrar</button>
+
+  <div id="painel" class="hidden">
+
+    <h4>Aula ao vivo</h4>
+    <input type="text" id="linkInput" placeholder="Link da aula ao vivo">
+    <button onclick="ativarLive()">Ativar Aula</button>
+    <button onclick="desativarLive()">Encerrar Aula</button>
+
+    <h4>Adicionar Material</h4>
+    <input type="text" id="tituloMaterial" placeholder="Título">
+    <input type="text" id="linkMaterial" placeholder="Link">
+    <button onclick="addMaterial()">Adicionar</button>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
